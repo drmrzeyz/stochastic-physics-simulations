@@ -156,3 +156,4 @@ The core methods — Metropolis-Hastings sampling, block-average variance estima
 ---
 
 © 2025 Ana Flores — Master's thesis project, Universidad de Guanajuato
+Fortran source code developed in collaboration with Alejandro Gil-Villegas, Universidad de Guanajuato

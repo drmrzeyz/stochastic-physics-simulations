@@ -1,0 +1,27 @@
+# requirements.txt
+# stochastic-physics-simulations
+# ─────────────────────────────────────────────────────────────────────────────
+# Install with:  pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Core scientific stack
+numpy>=1.21
+scipy>=1.7
+
+# JIT compilation — MCMC kernel performance
+numba>=0.55
+
+# Data manipulation and analysis
+pandas>=1.3
+
+# Visualization
+matplotlib>=3.4
+
+# Interactive notebooks
+jupyter>=1.0
+jupyterlab>=3.0
+ipykernel>=6.0
+
+# Notebook utilities
+ipywidgets>=7.0
+tqdm>=4.60

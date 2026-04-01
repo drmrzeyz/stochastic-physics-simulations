@@ -1,5 +1,5 @@
 # Stochastic Physics Simulations
-(work in progress...)
+
 
 > Stochastic simulation engine for evaluating the stability of complex systems, using variance reduction techniques.
 
@@ -41,23 +41,6 @@ This generates a Markov chain whose stationary distribution is the target Boltzm
 ```
 stochastic-physics-simulations/
 │
-├── README.md
-│
-├── notebooks/
-│   ├── 01_model_and_sampling.ipynb       # MCMC setup, proposal distribution, convergence
-│   ├── 02_simulation_walkthrough.ipynb   # Step-by-step annotated simulation run
-│   └── 03_results_analysis.ipynb         # Observables, variance analysis, pair correlations
-│
-├── src/
-│   ├── __init__.py
-│   ├── mcqhs.py                          # Main MCMC engine (Numba-accelerated)
-│   ├── potentials.py                     # Pair interaction model (isolated and testable)
-│   └── analysis.py                       # Statistical post-processing and plotting
-│
-├── original_fortran/
-│   ├── mcqhs.f                           # Original Fortran 77 source
-│   └── mc.inc                            # Shared variable declarations
-│
 ├── data/
 │   ├── inputs/
 │   │   └── mc.in                         # Example simulation parameters
@@ -66,8 +49,25 @@ stochastic-physics-simulations/
 │       ├── uav.dat                       # Time series for convergence diagnostics
 │       └── rdf.dat                       # Pair correlation function g(r)
 │
+├── notebooks/
+│   ├── 01_model_and_sampling.ipynb       # MCMC setup, proposal distribution, convergence
+│   ├── 02_simulation_walkthrough.ipynb   # Step-by-step annotated simulation run
+│   └── 03_results_analysis.ipynb         # Observables, variance analysis, pair correlations
+│
+├── original_fortran/
+│   ├── mcqhs.f                           # Original Fortran 77 source
+│   └── mc.inc                            # Shared variable declarations
+│
+├── src/
+│   ├── __init__.py
+│   ├── mcqhs.py                          # Main MCMC engine (Numba-accelerated)
+│   ├── potentials.py                     # Pair interaction model (isolated and testable)
+│   └── analysis.py                       # Statistical post-processing and plotting
+│
 ├── tests/
 │   └── test_potentials.py                # Numerical consistency tests vs. Fortran reference
+│
+├── README.md
 │
 └── requirements.txt                      # Python dependencies
 ```
@@ -155,5 +155,6 @@ The core methods — Metropolis-Hastings sampling, block-average variance estima
 
 ---
 
-© 2025 Ana Flores — Master's thesis project, Universidad de Guanajuato
+2025 Ana Flores — Master's thesis project, Universidad de Guanajuato
+
 Fortran source code developed in collaboration with Alejandro Gil-Villegas, Universidad de Guanajuato
